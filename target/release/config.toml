@@ -1,0 +1,11 @@
+api_key = "AIzaSyCPIReElGd6idKNMriP9GXg16vgvNz8R7E"
+working_dir = "sessions"
+
+[[tools]]
+name = "nmap"
+path = "/usr/bin/nmap"
+args = ["-sV", "-sC"]
+
+[rate_limit]
+requests_per_minute = 60
+concurrent_connections = 10

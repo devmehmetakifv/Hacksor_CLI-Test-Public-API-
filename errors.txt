@@ -1,0 +1,150 @@
+   Compiling pentest-ai v0.1.0 (/home/xenon/Desktop/Hacksor)
+warning: function `execute_command` is never used
+    --> src/main.rs:1078:10
+     |
+1078 | async fn execute_command(command: &str) -> Result<()> {
+     |          ^^^^^^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_module`, `start_session`, `run_modules`, `get_command_executor`, and `execute_security_command_from_intent` are never used
+  --> src/core/mod.rs:54:12
+   |
+53 | impl PentestEngine {
+   | ------------------ associated items in this implementation
+54 |     pub fn new() -> Self {
+   |            ^^^
+...
+62 |     pub fn add_module(&mut self, module: Box<dyn PentestModule>) {
+   |            ^^^^^^^^^^
+...
+66 |     pub async fn start_session(&mut self, target: Target) -> Result<()> {
+   |                  ^^^^^^^^^^^^^
+...
+77 |     pub async fn run_modules(&mut self) -> Result<()> {
+   |                  ^^^^^^^^^^^
+...
+90 |     pub fn get_command_executor(&mut self) -> &mut SecurityCommandExecutor {
+   |            ^^^^^^^^^^^^^^^^^^^^
+...
+94 |     pub async fn execute_security_command_from_intent(&mut self, user_message: &str) -> Result<Option<String>> {
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `last_output` is never read
+  --> src/core/security_commands.rs:33:5
+   |
+31 | pub struct SecurityCommandExecutor {
+   |            ----------------------- field in this struct
+32 |     command_templates: HashMap<String, SecurityCommand>,
+33 |     last_output: Option<String>,
+   |     ^^^^^^^^^^^
+
+warning: methods `get_last_output`, `suggest_command_from_intent`, `execute_command`, and `launch_terminal_command` are never used
+   --> src/core/security_commands.rs:146:12
+    |
+36  | impl SecurityCommandExecutor {
+    | ---------------------------- methods in this implementation
+...
+146 |     pub fn get_last_output(&self) -> Option<&String> {
+    |            ^^^^^^^^^^^^^^^
+...
+151 |     pub fn suggest_command_from_intent(&self, user_message: &str) -> Option<(String, HashMap<String, String>)> {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+240 |     pub async fn execute_command(&mut self, name: &str, params: &HashMap<String, String>) -> Result<String> {
+    |                  ^^^^^^^^^^^^^^^
+...
+263 |     async fn launch_terminal_command(&self, command: &str) -> Result<()> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `extract_domain` is never used
+   --> src/core/security_commands.rs:287:4
+    |
+287 | fn extract_domain(message: &str) -> Option<String> {
+    |    ^^^^^^^^^^^^^^
+
+warning: function `extract_command` is never used
+   --> src/core/security_commands.rs:301:4
+    |
+301 | fn extract_command(message: &str) -> Option<String> {
+    |    ^^^^^^^^^^^^^^^
+
+warning: method `clear_conversation` is never used
+   --> src/ai/mod.rs:275:12
+    |
+112 | impl GeminiAI {
+    | ------------- method in this implementation
+...
+275 |     pub fn clear_conversation(&mut self) {
+    |            ^^^^^^^^^^^^^^^^^^
+
+warning: field `work_dir` is never read
+  --> src/terminal/mod.rs:19:5
+   |
+18 | pub struct TerminalManager {
+   |            --------------- field in this struct
+19 |     work_dir: PathBuf,
+   |     ^^^^^^^^
+   |
+   = note: `TerminalManager` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: methods `execute_command`, `execute_script`, and `get_working_dir` are never used
+  --> src/terminal/mod.rs:37:18
+   |
+23 | impl TerminalManager {
+   | -------------------- methods in this implementation
+...
+37 |     pub async fn execute_command(&self, command: &str, args: &[&str]) -> Result<Output> {
+   |                  ^^^^^^^^^^^^^^^
+...
+46 |     pub async fn execute_script(&self, script_path: &str) -> Result<Output> {
+   |                  ^^^^^^^^^^^^^^
+...
+55 |     pub fn get_working_dir(&self) -> &PathBuf {
+   |            ^^^^^^^^^^^^^^^
+
+warning: methods `generate_findings_report` and `wait_for_command_completion` are never used
+   --> src/terminal/command_monitor.rs:403:12
+    |
+81  | impl CommandMonitor {
+    | ------------------- methods in this implementation
+...
+403 |     pub fn generate_findings_report(&self, output_file: &PathBuf) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+468 |     pub async fn wait_for_command_completion(&self, cmd_id: &str, timeout_seconds: u64) -> bool {
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `update_finding_with_action_result`, `add_follow_up_to_finding`, and `generate_summary_report` are never used
+   --> src/terminal/auto_documentation.rs:356:12
+    |
+67  | impl AutoDocumentation {
+    | ---------------------- methods in this implementation
+...
+356 |     pub fn update_finding_with_action_result(&mut self, action: &FollowUpAction) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+384 |     pub fn add_follow_up_to_finding(&mut self, finding_id: &str, action: FollowUpAction) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+399 |     pub fn generate_summary_report(&self, output_file: &PathBuf) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `monitor` is never read
+  --> src/terminal/action_executor.rs:12:5
+   |
+11 | pub struct ActionExecutor {
+   |            -------------- field in this struct
+12 |     monitor: Arc<CommandMonitor>,
+   |     ^^^^^^^
+
+warning: structure field `finishReason` should have a snake case name
+  --> src/ai/mod.rs:21:5
+   |
+21 |     finishReason: Option<String>,
+   |     ^^^^^^^^^^^^ help: convert the identifier to snake case: `finish_reason`
+   |
+   = note: `#[warn(non_snake_case)]` on by default
+
+warning: `pentest-ai` (bin "pentest-ai") generated 13 warnings
+    Finished `release` profile [optimized] target(s) in 5.02s

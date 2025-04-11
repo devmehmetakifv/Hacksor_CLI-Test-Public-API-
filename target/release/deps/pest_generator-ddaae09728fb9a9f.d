@@ -1,0 +1,11 @@
+/home/xenon/Desktop/Hacksor/target/release/deps/libpest_generator-ddaae09728fb9a9f.rmeta: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/macros.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/docs.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/generator.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/parse_derive.rs
+
+/home/xenon/Desktop/Hacksor/target/release/deps/libpest_generator-ddaae09728fb9a9f.rlib: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/macros.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/docs.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/generator.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/parse_derive.rs
+
+/home/xenon/Desktop/Hacksor/target/release/deps/pest_generator-ddaae09728fb9a9f.d: /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/lib.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/macros.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/docs.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/generator.rs /home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/parse_derive.rs
+
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/lib.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/macros.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/docs.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/generator.rs:
+/home/xenon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pest_generator-2.8.0/src/parse_derive.rs:

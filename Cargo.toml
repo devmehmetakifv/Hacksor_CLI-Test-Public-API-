@@ -1,0 +1,27 @@
+[package]
+name = "pentest-ai"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name"]
+description = "AI-powered penetration testing assistant"
+license = "Proprietary"
+
+[dependencies]
+tokio = { version = "1.36", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+termion = "2.0"
+tui = "0.19"
+crossterm = { version = "0.27", features = ["event-stream"] }
+async-trait = "0.1"
+log = "0.4"
+env_logger = "0.10"
+config = "0.13"
+uuid = { version = "1.4", features = ["v4"] }
+toml = "0.7"
+regex = "1.10"
+chrono = { version = "0.4", features = ["serde"] }
